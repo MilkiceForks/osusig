@@ -17,7 +17,7 @@ class ErrorImage
 	 * Initializes an error image.
 	 */
 	public function __construct() {
-		$this->canvas = new\Imagick();
+		$this->canvas = new \Imagick();
 	}
 
 	/**
