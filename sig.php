@@ -4,7 +4,7 @@
 
 require_once("p/.priv.php");
 
-function __autoload($class_name) {
+function my_autoload($class_name) {
 	$directory = 'class/';
 
 	if (file_exists($directory . $class_name . '.php')) {
@@ -12,6 +12,8 @@ function __autoload($class_name) {
 		return;
 	}
 }
+
+spl_autoload_register('my_autoload');
 
 $api = new OsuAPI(constant("AKEY"));
 
