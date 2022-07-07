@@ -159,7 +159,7 @@ class ComponentAvatar extends Component
 			$avatar->setImageAlphaChannel(Imagick::ALPHACHANNEL_SET);
 
 			$roundImage = new Imagick();
-			$roundImage->newPseudoImage($this->getWidth(), $this->getHeight(), 'gradient:transparent');
+			$roundImage->newPseudoImage($this->getWidth(), $this->getHeight(), 'canvas:transparent');
 
 			$roundMask = new ImagickDraw();
 			$roundMask->setFillColor(new ImagickPixel('black'));

@@ -209,7 +209,7 @@ class CardRegular extends Card
 	 */
 	public function drawFinalStroke($hexColour) {
 		$cardStrokeImage = new Imagick();
-		$cardStrokeImage->newPseudoImage($this->canvas->getImageWidth(), $this->canvas->getImageHeight(), 'gradient:transparent');
+		$cardStrokeImage->newPseudoImage($this->canvas->getImageWidth(), $this->canvas->getImageHeight(), 'canvas:transparent');
 
 		$cardStroke = new ImagickDraw();
 		$cardStroke->setFillColor(new ImagickPixel($hexColour));
@@ -225,7 +225,7 @@ class CardRegular extends Card
 		$cardStrokeImage->drawImage($cardStroke);
 
 		$roundImage = new Imagick();
-		$roundImage->newPseudoImage($this->canvas->getImageWidth(), $this->canvas->getImageHeight(), 'gradient:transparent');
+		$roundImage->newPseudoImage($this->canvas->getImageWidth(), $this->canvas->getImageHeight(), 'canvas:transparent');
 
 		$roundMask = new ImagickDraw();
 		$roundMask->setFillColor(new ImagickPixel('black'));
